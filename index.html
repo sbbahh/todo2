@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Save Tasks Online</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <h1 class="title">Online to do list</h1>
+      <div class="allSections">
+        <div class="left">
+          <div class="taskInput">
+            <i class="fas fa-tasks taskIcon"></i>
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="start type your task here"
+            />
+          </div>
+          <div class="advices">
+            <ul>
+              <li>
+                👉 Start type a task in the input field, and press "Enter" to
+                add it.
+              </li>
+              <li>👉 You can edit the task by press the ellipsis icon.</li>
+              <li>👉 the tasks are stored in the local storage.</li>
+              <li>
+                👉 you can set a fivorite color by tap on the settings icon.
+              </li>
+            </ul>
+          </div>
+
+          <!-- <div class="settings">
+            <i class="fas fa-gears"></i>
+          </div> -->
+        </div>
+        <div class="right">
+          <div class="top">
+            <h2 class="title">your all tasks</h2>
+            <div class="filters">
+              <div class="content">
+                <span class="active" id="all">All</span>
+                <span id="pending">Pending</span>
+                <span id="completed">Completed</span>
+              </div>
+              <div class="clearAll">
+                <button class="deleteAll">Delete All</button>
+              </div>
+            </div>
+          </div>
+          <div class="tasks"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

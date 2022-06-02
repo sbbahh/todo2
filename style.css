@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+}
+
+:root {
+    --white: #fff;
+    --black: #111;
+    --black2: #222;
+    --blue: #4ad;
+    --blue: #00b0b0;
+    --green: #4ad991;
+    --yellow: #ffca83;
+    --red: #ff7285;
+    --gray: #b4b4c6;
+}
+
+body {
+    background-color: var(--black);
+}
+
+.wrapper {
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #111;
+}
+
+.wrapper .allSections {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .title {
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    color: var(--white);
+}
+
+.wrapper .left {
+    width: 100%;
+    position: relative;
+    margin-right: 2rem;
+    border-radius: 10px;
+    background: #2d2d2d;
+    padding: 1rem;
+    margin-bottom: 2em;
+}
+
+.wrapper .taskInput {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.wrapper .taskInput .taskIcon {
+    left: .5rem;
+    font-size: 18px;
+    color: var(--blue);
+    position: absolute;
+}
+
+.wrapper .taskInput input {
+    padding: .5rem 1rem;
+    padding-left: 1.9rem;
+    font-size: 17px;
+    text-transform: capitalize;
+    border: 2px solid var(--blue);
+    border-radius: 0.5rem;
+    background-color: #2d2d2d;
+    color: var(--white);
+    width: 100%;
+}
+
+.wrapper .taskInput input:focus {
+    outline: none;
+}
+
+.wrapper .left .advices {
+    margin-top: 2.5rem;
+}
+
+.wrapper .left .advices li {
+    text-transform: capitalize;
+    margin: 1rem 0;
+    font-size: 18px;
+    border-radius: .1rem;
+    background-color: var(--black2);
+    padding: 1rem;
+    color: var(--black2);
+    color: var(--white);
+}
+
+.wrapper .left .settings {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.wrapper .left .settings i {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
+
+/* right section */
+.wrapper .right {
+    width: 100%;
+    border-radius: 10px;
+    background: #2d2d2d;
+    padding: 1rem;
+    position: relative;
+}
+.wrapper .right .top{
+    background-color: #222;
+    padding: .3rem;
+    border-radius: .3rem;
+}
+
+.wrapper .right .title {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+.wrapper .right .filters{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper .right .filters span{
+    background-color: #03a9f4;
+    color: var(--white);
+    padding: .4rem 1rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: bold;
+}
+.wrapper .right .filters span.active{
+    background-color: #f44336;
+}
+.wrapper .right .filters .clearAll button{
+    padding: .5rem 1rem;
+    background-color: #03a9f4;
+    color: var(--white);
+    font-weight: bold;
+    border-radius: .4rem;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+/* .wrapper .right .filters .clearAll button:hover{
+    background-color: var(--gray);
+} */
+
+
+
+
+.checked{
+    text-decoration: line-through;
+}
+
+.wrapper .right .tasks {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.wrapper .right .tasks .task {
+    display: flex;
+    align-items: center;
+    background-color: #03a9f4;
+    color: var(--white);
+    border-radius: .3rem;
+    padding: 1rem;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.wrapper .right .tasks .task:last-child {
+    margin-bottom: 0;
+}
+
+.wrapper .right .tasks label {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .right .tasks label input {
+    margin-right: .3rem;
+    padding: .4rem;
+    height: 20px;
+    width: 20px;
+}
+
+.wrapper .right .tasks label p {
+    font-size: 1.2rem;
+}
+
+.wrapper .right .tasks .tools {
+    margin-left: .5rem;
+}
+
+.wrapper .right .tasks .tools .toolsContent {
+    display: none;
+}
+
+.wrapper .right .tasks .tools .toolsContent {
+    position: absolute;
+    right: 9px;
+    top: 0;
+    background: var(--red);
+    color: var(--white);
+    border-radius: .5rem;
+    padding: .5rem;
+    z-index: 10;
+}
+.wrapper .right .tasks .tools .toolsContent li{
+    margin-bottom: .4rem;
+    transition: .2s;
+    cursor: pointer;
+    user-select: none;
+}
+.wrapper .right .tasks .tools .toolsContent li i{
+    margin-right: .2rem;
+}
+.wrapper .right .tasks .tools .toolsContent li:last-child{
+    margin-bottom: 0;
+}
+
+.showTools {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.wrapper .right .tasks .tools .ellipsis {
+    cursor: pointer;
+}
+
+
+.wrapper .right .tasks .noTasks {
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper .right .tasks .noTasks img {
+    max-width: 100%;
+    width: 30%;
+    margin-bottom: 1.2rem;
+}
+
+.wrapper .right .tasks .noTasks p {
+    font-size: 23px;
+    text-transform: capitalize;
+    color: var(--white);
+}
+
+@media (max-width: 800px) {
+    .wrapper .right .tasks .noTasks img {
+        width: 70%;
+    }
+    .wrapper .right .filters{
+        flex-direction: column;
+    }
+    .wrapper .right .filters .clearAll{
+        margin-top: 1rem;
+    }
+}
